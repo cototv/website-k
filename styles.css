@@ -887,6 +887,14 @@ header .container {
     font-size: 1.8rem;
 }
 
+.price-offer-note {
+    margin: 0 0 0.6rem;
+    color: #ff4d8d;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+}
+
 .price-header h4 {
     flex: 1;
 }
