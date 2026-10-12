@@ -350,7 +350,25 @@ header .container {
 
 .hero-cta {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+}
+
+.btn-youtube {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background-color: #ff0033;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 0, 51, 0.35);
+}
+
+.btn-youtube:hover {
+    background-color: #cc0029;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(255, 0, 51, 0.45);
 }
 
 .hero-image {
