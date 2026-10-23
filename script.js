@@ -541,7 +541,7 @@ function trackEvent(eventName, params = {}) {
     }
 }
 
-const WHATSAPP_URL = 'https://wa.me/5582998258038';
+const WHATSAPP_URL = 'https://wa.me/5582998258038?text=Teste%207%20Dias%20e%20se%20n%C3%A3o%20gostar%20devolvemos%20seu%20dinheiro%21';
 
 function initAnalyticsTracking() {
     document.querySelectorAll('[data-track="whatsapp"]').forEach((el) => {
