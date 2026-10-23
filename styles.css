@@ -349,9 +349,20 @@ header .container {
 }
 
 .hero-cta {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+    align-items: stretch;
+}
+
+.hero-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
 }
 
 .btn-youtube {
@@ -369,6 +380,23 @@ header .container {
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(255, 0, 51, 0.45);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background-color: #25D366;
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
 }
 
 .hero-image {
@@ -403,6 +431,68 @@ header .container {
     border-radius: 50%;
     filter: blur(60px);
     z-index: -1;
+}
+
+.clients-marquee {
+    padding: 1rem 0 3.5rem;
+    overflow: hidden;
+}
+
+.clients-marquee .section-title {
+    margin-bottom: 2.4rem;
+}
+
+.clients-viewport {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.clients-track {
+    display: flex;
+    width: max-content;
+    animation: clients-scroll-right 48s linear infinite;
+}
+
+.clients-viewport:hover .clients-track {
+    animation-play-state: paused;
+}
+
+.clients-group {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.clients-group img {
+    height: 210px;
+    width: auto;
+    max-width: none;
+    flex: 0 0 auto;
+    object-fit: contain;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-card-border);
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+@keyframes clients-scroll-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+    .clients-group img {
+        height: 150px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .clients-track {
+        animation: none;
+    }
 }
 
 /* Features Section */
@@ -911,6 +1001,21 @@ header .container {
     font-weight: 700;
     font-size: 0.95rem;
     letter-spacing: 0.01em;
+}
+
+.price-promo-deadline {
+    margin: 0 auto 0.85rem;
+    max-width: 100%;
+    padding: 0.45rem 0.65rem;
+    border-radius: 8px;
+    background: rgba(247, 37, 133, 0.16);
+    border: 1px solid rgba(247, 37, 133, 0.55);
+    color: #ffe3ef;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.35;
 }
 
 .price-header h4 {
@@ -1518,14 +1623,13 @@ footer {
     }
 
     .hero-cta {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         width: 100%;
         gap: 0.75rem;
     }
     
     .hero-cta .btn {
         width: 100%;
-        box-sizing: border-box;
     }
     
     .hero-content h1 {
@@ -1697,6 +1801,38 @@ footer {
     background: linear-gradient(135deg, #25D366, #128C7E);
     color: white;
     box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+    color: white;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px) scale(1.06);
+    color: white;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55);
 }
 
 .whatsapp-btn.whatsapp-soon {

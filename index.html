@@ -26,9 +26,6 @@
     <!-- Google Search Console: cole abaixo a meta tag de verificação do painel (Configurações > Verificação de propriedade) -->
     <!-- <meta name="google-site-verification" content="COLE_O_CODIGO_AQUI" /> -->
 
-    <!-- Cloudflare Turnstile (anti-spam) -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
-
 </head>
 
 <body>
@@ -76,12 +73,46 @@
                         <i class="fab fa-youtube"></i>
                         YouTube
                     </a>
+                    <a href="https://wa.me/5582998258038" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-track="whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-image-container">
                     <div class="glow"></div>
                     <img src="Interface.png" alt="Layout do KlinkBot" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-marquee" aria-label="Conquistas Recentes - Clientes">
+        <div class="container">
+            <h2 class="section-title">Conquistas Recentes - Clientes</h2>
+        </div>
+        <div class="clients-viewport">
+            <div class="clients-track">
+                <div class="clients-group">
+                    <img src="Clientes/cliente%201.png" alt="Print de cliente 1">
+                    <img src="Clientes/cliente%202.png" alt="Print de cliente 2">
+                    <img src="Clientes/cliente%203.png" alt="Print de cliente 3">
+                    <img src="Clientes/cliente%204.png" alt="Print de cliente 4">
+                    <img src="Clientes/cliente%205.png" alt="Print de cliente 5">
+                    <img src="Clientes/cliente%206.png" alt="Print de cliente 6">
+                    <img src="Clientes/cliente%207.png" alt="Print de cliente 7">
+                    <img src="Clientes/cliente%208.jpeg" alt="Print de cliente 8">
+                </div>
+                <div class="clients-group" aria-hidden="true">
+                    <img src="Clientes/cliente%201.png" alt="">
+                    <img src="Clientes/cliente%202.png" alt="">
+                    <img src="Clientes/cliente%203.png" alt="">
+                    <img src="Clientes/cliente%204.png" alt="">
+                    <img src="Clientes/cliente%205.png" alt="">
+                    <img src="Clientes/cliente%206.png" alt="">
+                    <img src="Clientes/cliente%207.png" alt="">
+                    <img src="Clientes/cliente%208.jpeg" alt="">
                 </div>
             </div>
         </div>
@@ -402,7 +433,7 @@
 
             <div class="pricing-cards">
 
-                <div class="price-card limited" data-plan="teste_rapido_7_dias" data-plan-option="Teste Rápido - 7 dias (R$63,00)">
+                <div class="price-card limited" data-plan="teste_rapido_7_dias" data-plan-option="Teste Rápido - 7 dias (R$60,00)">
                     <span class="price-badge badge-limited">Por Tempo Limitado</span>
                     <div class="price-header">
                         <h3>⚡ Teste Rápido</h3>
@@ -411,8 +442,8 @@
                         </h4>
     
                         <div class="price">
-                            <span class="price-value">R$63.00</span>
-                            <span class="price-period">R$9.00 por dia</span>
+                            <span class="price-value">R$60.00</span>
+                            <span class="price-period">R$8.57 por dia</span>
                         </div>
                     </div>
                 </div>
@@ -424,6 +455,7 @@
                     <div class="price-header">
                         <h3>⭐ Plano Mensal</h3>
                         <p class="price-offer-note">50% OFF para novos assinantes</p>
+                        <p class="price-promo-deadline">Promoção válida até<br>30 de novembro</p>
                         <h3> 30 dias de acesso</h3>
                         <h4>O equilíbrio perfeito para quem quer usar o serviço continuamente, com praticidade e flexibilidade.
                         </h4>
@@ -488,7 +520,7 @@
     <section id="contact">
         <div class="container">
             <h2 class="section-title">Fale Conosco</h2>
-            <p class="section-subtitle">Forneça os dados e a equipe KlinkBOT entrará em contato o mais breve possível</p>
+            <p class="section-subtitle">Fale com a equipe KlinkBOT pelo WhatsApp</p>
 
             <div class="contact-container">
                 <div class="contact-cards">
@@ -501,14 +533,10 @@
                             <p class="contact-role">Vendas/Suporte</p>
                         </div>
                         <div class="contact-actions">
-                            <button type="button" class="hire-btn" id="openHireModal" data-track="contratar">
-                                <i class="fas fa-file-signature"></i>
-                                <span>Contratar</span>
-                            </button>
-                            <span class="whatsapp-btn whatsapp-soon" aria-disabled="true" data-track="whatsapp">
+                            <a href="https://wa.me/5582998258038" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" data-track="whatsapp">
                                 <i class="fab fa-whatsapp"></i>
-                                <span>Em breve</span>
-                            </span>
+                                <span>WhatsApp</span>
+                            </a>
                             <span class="discord-btn" aria-disabled="true" data-track="discord">
                                 <i class="fab fa-discord"></i>
                                 <span>Apenas para Membros</span>
@@ -544,43 +572,9 @@
         </div>
     </section>
 
-    <!-- Hire Modal -->
-    <div id="hireModal" class="hire-modal" aria-hidden="true">
-        <div class="hire-modal-backdrop" data-close-hire></div>
-        <div class="hire-modal-dialog" role="dialog" aria-labelledby="hireModalTitle" aria-modal="true">
-            <button type="button" class="hire-modal-close" data-close-hire aria-label="Fechar">&times;</button>
-            <h3 id="hireModalTitle">Contratar KlinkBOT</h3>
-            <p class="hire-modal-intro">Forneça os dados e a equipe KlinkBOT entrará em contato o mais breve possível.</p>
-
-            <form id="hireForm">
-                <label for="hireName">Nome</label>
-                <input type="text" id="hireName" name="nome" required placeholder="Seu nome" autocomplete="name">
-
-                <label for="hirePhone">Telefone com DDD</label>
-                <input type="tel" id="hirePhone" name="telefone" required placeholder="(11) 99999-9999" autocomplete="tel" inputmode="tel">
-
-                <label for="hirePlan">Plano desejado</label>
-                <select id="hirePlan" name="plano" required>
-                    <option value="" disabled selected>Selecione um plano</option>
-                    <option value="Teste Rápido - 7 dias (R$63,00)">Teste Rápido - 7 dias (R$63,00)</option>
-                    <option value="Experiência Plus - 15 dias (R$127,50)">Experiência Plus - 15 dias (R$127,50)</option>
-                    <option value="Plano Mensal - 30 dias (R$120,00 — 50% OFF para novos assinantes)">Plano Mensal - 30 dias (R$120,00 — 50% OFF para novos assinantes)</option>
-                    <option value="Plano Pro - 90 dias (R$700,00)">Plano Pro - 90 dias (R$700,00)</option>
-                    <option value="Plano Premium - 180 dias (R$1260,00)">Plano Premium - 180 dias (R$1260,00)</option>
-                </select>
-
-                <div class="hire-turnstile-wrap">
-                    <div id="cf-turnstile"></div>
-                </div>
-
-                <button type="submit" class="hire-submit-btn" data-track="enviar_contratacao">
-                    Enviar pedido
-                </button>
-                <p class="hire-form-note">Você receberá um retorno no WhatsApp/telefone informado.</p>
-                <p id="hireFormError" class="hire-form-error" hidden></p>
-            </form>
-        </div>
-    </div>
+    <a href="https://wa.me/5582998258038" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" data-track="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer>
